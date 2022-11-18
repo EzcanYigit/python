@@ -34,3 +34,55 @@ kullaniciAdi = "Ezcan"
 kullaniciSoyadi = "Yiğit"
 sonucMesaj = (mesaj+" "+kullaniciAdi+" "+kullaniciSoyadi)
 print(sonucMesaj)
+ 
+ 
+ # if else blokları çalışma 
+dolarDun= 7.7
+dolarBugun= 7.7
+
+if dolarDun<dolarBugun:
+    print("azalış oku")
+elif dolarDun>dolarBugun:
+    print("artış oku")   
+else:
+    print("eşittir")
+
+sayi1= 5
+sayi2= 9
+sayi3= 13
+
+if sayi1>sayi2 and sayi1>sayi3:
+    print("5 en büyük sayıdır")
+
+elif sayi2>sayi1 and sayi2>sayi3:
+    print("9 en büyük sayıdır")
+
+elif sayi3>sayi1 and sayi3>sayi2:
+    print("13 en büyük sayıdır")    
+
+
+if sayi1<sayi2 and sayi1<sayi3:
+    print("5 en küçük sayıdır")
+
+elif sayi2<sayi1 and sayi2<sayi3:
+    print("9 en küçük sayıdır")
+
+elif sayi3<sayi1 and sayi3<sayi2:
+    print("13 en küçük sayıdır")  
+
+
+students = ["ayse", "fatma", "hayriye"]
+
+print(len(students))
+print(students)
+
+
+
+
+    
+
+
+
+
+
+
