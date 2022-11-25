@@ -1,0 +1,37 @@
+Sayısal Veri Tipleri: Tam ya da rasyonel sayılar gibi farklı büyüklükte (magnitude) ve hassasiyette (precision) veri türlerini saklamaya yararlar.
+PostgreSQL temelde iki farklı sayısal veri türüne sahiptir. Bu türler;
+-Integer, Floating-point, bigint, smallint, decimal, numeric, double precision, real.
+
+Metinsel Veri Tipleri: Hem char, hem de varchar metinsel verileri saklamak için kullanılan veri tipleridir. Bu tipler;
+-character varying(n), varchar(n), character(n), char(n), text
+
+Binary Veri Tipi : Binary tipindeki verileri saklamak için PostgreSQL bytea veri tipini kullanır.Bytea veri tipi input ve output için iki formatı destekler:
+hex ve escape. Her iki format da daima input olarak kabul edilirken output için varsayılan format hex’tir. 
+
+Boolean Veri Tipleri : Boolean veri ihtiyaçları için PostgreSQL’de sunulan BOOLEAN veri tipi TRUE, FALSE ve bilinmeyen durumlarda kullanılmak üzere de NULL değerlerini alabilir.
+Bu veri tipinde true yerine yes, on, t ya da 1 kabul edilebilirken false yerine de no, off, f ve 0 kabul edilmektedir. Büyük - küçük hassasiyeti aranmaz.
+
+Parasal Veri Tipleri :
+Parasal bilgileri saklamak için PostgreSQL’de MONEY veri tipi kullanılabilir. Bu veri tipinde geçerli olan para tipi bilgisi ve saklanacak verinin ondalık hassasiyeti veritabanının lc_monetary ayarında belirlenir. 
+Kuruş hassasiyeti de diyebileceğimiz bu değer varsayılan olarak virgül sonrası 2 hanedir.
+
+Tarih / Zaman Veri Tipleri :
+PostgreSQL çok geniş bir tarih - zaman veri tipi kütüphanesi sunmaktadır. 
+Bu sayede tarih ve zaman fonksiyonları çok etkin bir şekilde kullanılabilmekte ve birbirine dönüştürülerek çok etkin hesaplamalar yapılabilmektedir.
+-timestamp, date, time, interval 
+
+ENUMERATED Veri Tipleri
+Sıralı tipler, statik, dizilmiş değerler kümesi olarak ifade edilebilen veri türleridir. Haftanın günleri, yılın ayları ya da kullanıcının tanımlayacağı herhangi bir değerler dizisi tek bir enum veri girdisi olabilir. 
+Bu tür verilerin kullanılabilmesi için kullanıcının ENUM türünde bir veri tanımlaması gerekmektedir. Bu kullanıcı tanımlı tipin hata vermeden kullanılabilmesi için ENUM’da tanımlı haliyle aynı şekilde girilmiş olması gereklidir.
+Enum içeriği büyük - küçük harfe duyarlıdır ve liste harici elemanları kabul etmez.
+
+Network Adres Tipleri
+PostgreSQL farklı tipte network adreslerinin (IPv4, IPv6, MAC) saklanabilmesini sağlayan veri tiplerinin oluşturulmasına da izin vermektedir.
+Metin tipinde veriler yerine bunların kullanılması sayesinde hata kontrolü yapmak veya bu veriler üzerinde çalışan bazı özel operatör ve fonksiyonları kullanabilmek mümkün hale gelmektedir.
+-cidr, inet, macaddr, macaddr8
+
+Geometrik Veri Tipleri
+PostgreSQL, 2 boyutlu geometrik verilerin saklanabilmesi için geometrik veri tiplerine sahiptir. Bu veri tipleri PostGIS veri tipleri ile karıştırılmamalıdır.
+Zira PostgreSQL bünyesinde çok güçlü bir coğrafi veritabanı modülü olan PostGIS de ayrıca bulunmaktadır.
+-point, line, lseg, box, path, polygon, circle
+
