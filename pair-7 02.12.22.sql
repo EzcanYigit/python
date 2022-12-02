@@ -62,18 +62,19 @@ select p.unit_price , count(*) from product_sellers p
 group by p.unit_price
 having p.unit_price>100
 
---12
+--
 select * from shipping_company
+--
 
---13
+--12
 Select MAX(quantity) as "En pahalı sipariş" from product_sellers
 
---14
+--13
 Select unit_price as "En pahalı kargo şirketi" from product_sellers
 order by unit_price desc
 limit 3;
 
---15
+--14
 select * from customers 
 where name = 'emre' and not surname = 'öney' 
 
